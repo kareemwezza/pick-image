@@ -8,9 +8,10 @@ class App extends React.Component {
   onSearchSubmit = async (term) => {
     /// Axios will return a promise so we can use .then with it or we can use async
     const response = await unsplash.get("/search/photos", {
-      params: { query: term },
+      params: { query: term, per_page: 20 },
     });
-    /* .then((res) => console.log(res.data.results)); */
+    /* axios return a promise so we can use .then((res) => console.log(res.data.results)); */
+    console.log(response.data.results);
     this.setState({ images: response.data.results });
   };
 

@@ -5,4 +5,5 @@ export default axios.create({
   headers: {
     Authorization: "Client-ID Oh7C2Vvjxn_dyTVe_VFFwbXhHcKXS2-z7ON0Z1lB3lE",
   },
+  count: 20,
 });
